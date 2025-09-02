@@ -1,3 +1,25 @@
 body {
-    margin: 0;
+  margin: 0;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+#top {
+  background-color: aqua;
+  border: 10px solid black;
+  position: relative;
+}
+#mid {
+  background-color: coral;
+  border: 20px solid black;
+  position: relative;
+  left: 210px;
+}
+#bot {
+  background-color: beige;
+  border: 10px solid black;
+  position: relative;
+  left: 440px;
 }
