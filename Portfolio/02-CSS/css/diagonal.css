@@ -7,18 +7,18 @@ div {
   height: 200px;
 }
 #top {
-  background-color: aqua;
+  background-color: red;
   border: 10px solid black;
   position: relative;
 }
 #mid {
-  background-color: coral;
+  background-color: blue;
   border: 20px solid black;
   position: relative;
   left: 210px;
 }
 #bot {
-  background-color: beige;
+  background-color: yellow;
   border: 10px solid black;
   position: relative;
   left: 440px;
