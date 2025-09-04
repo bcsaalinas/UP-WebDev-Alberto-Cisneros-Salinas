@@ -19,10 +19,39 @@
       rel="stylesheet"
     />
     <style>
-      img {
+      /* Keep the hero portrait circular */
+      #hero img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
+        object-fit: cover;
+      }
+
+      /* Generic side-by-side table layout */
+      .info-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .info-table td {
+        vertical-align: middle;
+        padding: 8px 12px;
+      }
+      .info-table img {
+        display: block;
+      }
+
+      /* Logos and category icons */
+      .logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        object-fit: contain;
+        background: #fff;
+      }
+      .category-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
         object-fit: cover;
       }
     </style>
@@ -76,23 +105,44 @@
 
       <section id="education">
         <h2>Education</h2>
-        <ul>
-          <li>
-            <strong>Colegio Finlandes</strong> - Middle School (<em
-              ><time datetime="2019-2021">2019-2021</time></em
-            >)
-          </li>
-          <li>
-            <strong>Instituto de Ciencias</strong> - High School (<em
-              ><time datetime="2021-2024">2021-2024</time></em
-            >)
-          </li>
-          <li>
-            <strong>Universidad Panamericana</strong> - College (<em
-              ><time datetime="2021-2025">2021-2025 (still ongoing)</time></em
-            >)
-          </li>
-        </ul>
+        <table class="info-table" aria-label="Education with logos">
+          <tr>
+            <td>
+              <img
+                class="logo"
+                src="images/finlandes.png"
+                alt="Colegio Finlandes logo"
+              />
+            </td>
+            <td>
+              <strong>Colegio Finlandes</strong> - Middle School (
+              <em><time datetime="2019-2021">2019-2021</time></em> )
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="logo"
+                src="images/ciencias.jpeg"
+                alt="Instituto de Ciencias logo"
+              />
+            </td>
+            <td>
+              <strong>Instituto de Ciencias</strong> - High School (
+              <em><time datetime="2021-2024">2021-2024</time></em> )
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img class="logo" src="images/UP.jpg" alt="UP logo" />
+            </td>
+            <td>
+              <strong>Universidad Panamericana</strong> - College (
+              <em><time datetime="2021-2025">2021-2025 (still ongoing)</time></em>
+              )
+            </td>
+          </tr>
+        </table>
         <hr />
       </section>
 
@@ -121,32 +171,62 @@
         <hr />
       </section>
 
-      <div id="books">
-        <ul>
-          <li><b>Books:</b></li>
-          <ul>
-            <li>48 Laws of Power</li>
-            <li>The Art of War</li>
-            <li>Ghost in the Wires</li>
-          </ul>
-
-          <li><b>Movies:</b></li>
-          <ul>
-            <li>Scarface</li>
-            <li>The Godfather</li>
-            <li>The Conjuring</li>
-          </ul>
-
-          <li><b>TV Shows:</b></li>
-          <ul>
-            <li>Breaking Bad</li>
-            <li>Ozark</li>
-            <li>Dark</li>
-          </ul>
-
-          <ul></ul>
-        </ul>
-      </div>
+      <section id="media">
+        <h2>Books, Movies &amp; TV Shows</h2>
+        <table class="info-table" aria-label="Favorite media categories">
+          <tr>
+            <td>
+              <img
+                class="category-icon"
+                src="images/book.webp"
+                alt="Books icon"
+              />
+            </td>
+            <td>
+              <b>Books:</b>
+              <ul>
+                <li>48 Laws of Power</li>
+                <li>The Art of War</li>
+                <li>Ghost in the Wires</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="category-icon"
+                src="images/movies.jpeg"
+                alt="Movies icon"
+              />
+            </td>
+            <td>
+              <b>Movies:</b>
+              <ul>
+                <li>Scarface</li>
+                <li>The Godfather</li>
+                <li>The Conjuring</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="category-icon"
+                src="images/tvshows.jpg"
+                alt="TV shows icon"
+              />
+            </td>
+            <td>
+              <b>TV Shows:</b>
+              <ul>
+                <li>Breaking Bad</li>
+                <li>Ozark</li>
+                <li>Dark</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
       <hr />
       <section id="hobbies">
         <h2>Hobbies</h2>
