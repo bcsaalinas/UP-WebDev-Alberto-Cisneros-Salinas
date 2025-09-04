@@ -1,4 +1,34 @@
 body {
   margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  font-size: 0;
+}
+
+#canvas > div {
   display: inline-block;
+  width: 33%;
+  height: 50%;
+  vertical-align: top;
+  font-size: 1rem;
+}
+
+#top {
+  background-color: #002b7f;
+}
+
+#mid {
+  background-color: #fcd116;
+}
+
+#bot {
+  background-color: #d52b1e;
 }

@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+#top {
+  background-color: red;
+  border: 10px solid black;
+  position: relative;
+  left: 600px;
+  top: 600px;
+}
+
+#mid {
+  background-color: blue;
+  border: 20px solid black;
+  position: relative;
+  left: 380px;
+  top: 150px;
+}
+
+#bot {
+  background-color: yellow;
+  border: 10px solid black;
+  position: relative;
+  top: -400px;
+}
