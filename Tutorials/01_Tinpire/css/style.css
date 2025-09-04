@@ -17,3 +17,32 @@
     background-position: 0% 50%;
   }
 }
+
+.hero-phone {
+  max-width: 360px;
+}
+
+.testimonial-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .testimonial-img-shift {
+    margin-left: -20px;
+  }
+}
+
+.logo-row img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+#footer {
+  /* make sure that no collapsing margins cause a white strip */
+  padding-bottom: 1px;
+}
