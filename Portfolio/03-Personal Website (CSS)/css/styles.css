@@ -158,6 +158,42 @@ img.logo {
   border-radius: 50%;
 }
 
+.edu-table td.logo img,
+.category-table td.logo img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.edu-table td,
+.category-table td {
+  vertical-align: top;
+}
+.edu-table {
+  margin: 0 auto 16px;
+}
+.category-table {
+  margin: 12px 0;
+  width: 100%;
+}
+.category-table td.info {
+  padding-left: 50px;
+}
+.category-table td.logo {
+  width: 84px;
+  padding-left: 0;
+}
+.category-table td.logo img {
+  display: block;
+  margin-left: 0;
+}
+.category-table b {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  color: #c19a6b;
+  margin-bottom: 6px;
+}
+
 footer form {
   max-width: 900px;
   margin: 24px auto;
