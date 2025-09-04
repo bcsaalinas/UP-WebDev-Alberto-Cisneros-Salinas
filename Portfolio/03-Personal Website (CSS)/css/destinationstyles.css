@@ -1,0 +1,138 @@
+:root {
+  /* created a variable for reusing colors */
+  --bg: #1281a0;
+  --card: #0e4290;
+  --card-alt: #0c3a80;
+  --ink: #ffffff;
+  --muted: #f6f5f2;
+  --line: #e5e0d3;
+  --accent: #d4a373;
+  --radius: 14px;
+  --space: 20px;
+  --maxw: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Merriweather, serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  text-align: center;
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 28px auto;
+  padding: 0 var(--space) var(--space);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+
+.masonry {
+  column-gap: var(--space);
+  column-fill: balance;
+  column-count: 2;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: calc(var(--space) * 1.2);
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 var(--space);
+  break-inside: avoid;
+  scroll-margin-top: 16px;
+}
+
+section:nth-of-type(even) {
+  background: var(--card-alt);
+}
+
+section h2 {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-family: "Montserrat", sans-serif;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid var(--line);
+  background: #fffdf8;
+  margin-bottom: 12px;
+}
+img.flag {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+section p {
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+section li b {
+  color: var(--muted);
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+section li img {
+  vertical-align: middle;
+  margin-left: 6px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+main > p a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--card);
+  align-self: flex-start;
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+hr {
+  border: 0;
+  border-top: 6px dotted #eaf6f6;
+  width: 4%;
+  margin: 0 100px;
+}
+
+a:hover {
+  color: #00a000;
+}

@@ -1,3 +1,221 @@
-body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: Merriweather, serif;
+}
+
+body {
+  text-align: center;
+  background-color: #837060;
+  color: #2c2c2c;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 5.5rem;
+  margin: 50px;
+  color: #e5d5c3;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  margin: 20px;
+  color: #c19a6b;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #a3c4bc;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#hero > img.hero-photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0% 30%;
+  border-radius: 50%;
+}
+
+#quote {
+  padding: 30px;
+}
+
+.cloud {
+  position: sticky;
+  top: 12px;
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  z-index: 2;
+}
+.cloud--left {
+  align-self: flex-start;
+  margin-left: 16px;
+}
+.cloud--right {
+  align-self: flex-end;
+  margin-right: 16px;
+}
+.mountain {
+  width: min(90%, 600px);
+  height: auto;
+  align-self: center;
+  margin-top: 16px;
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+hr {
+  border: 0;
+  border-top: 6px dotted #eaf6f6;
+  width: 4%;
+  margin: 24px 100px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #e5d5c3;
+}
+
+a:hover {
+  color: #008000;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(229, 213, 195, 0.5);
+  background: rgba(229, 213, 195, 0.15);
+}
+
+main > section {
+  padding: 0 0;
+}
+
+main > section:nth-of-type(even) {
+  background-color: #6f5f51;
+}
+
+.section {
+  background: rgba(229, 213, 195, 0.12);
+  border: 1px solid rgba(229, 213, 195, 0.35);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 48px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.team-card {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(229, 213, 195, 0.35);
+  background: rgba(229, 213, 195, 0.08);
+  text-align: center;
+}
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.team-card .name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-top: 8px;
+  color: #c19a6b;
+}
+
+img.logo {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+footer form {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 16px;
+  border: 3px dotted #eaf6f6;
+  border-radius: 14px;
+  background: #f6efe6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: center;
+}
+
+footer {
+  padding: 16px;
+}
+
+footer form label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+footer form input[type="radio"] + label {
+  margin-left: 6px;
+  margin-right: 12px;
+}
+
+footer form input[type="submit"] {
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+
+footer form .radio-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+footer form .radio-group input[type="radio"] + label {
+  margin: 0 12px 0 6px;
+}
+
+input,
+select,
+textarea {
+  border-radius: 12px;
+  border: 1px solid #e5d5c3;
+  background: #fffaf2;
+  padding: 10px 12px;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background: #c19a6b;
+  color: #fff;
+  border: none;
 }
