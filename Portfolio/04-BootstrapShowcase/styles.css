@@ -1,0 +1,97 @@
+:root {
+  --bg-primary: #122445;
+  --bs-primary: #1f4aad;
+  --bs-primary-rgb: 31, 74, 173;
+  --bs-secondary: #0e1f4d;
+  --bs-secondary-rgb: 14, 31, 77;
+  --bs-body-bg: #0a1328;
+  --bs-body-color: #e6ecf8;
+  --bg-accent: #3195d2;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #070b22 0%, #0d1f3c 55%, #112a52 100%);
+  color: var(--bs-body-color);
+}
+
+.glowing-text {
+  color: var(--bs-body-color);
+  text-shadow: 0 0 5px skyblue, 0 0 10px rgb(7, 14, 161),
+    0 0 15px rgb(7, 36, 130);
+}
+.nav-link:hover,
+.navbar-brand:hover {
+  text-shadow: 0 0 5px rgb(203, 11, 203), 0 0 10px rgb(184, 72, 222);
+  color: var(--bs-body-color);
+}
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--bs-body-color);
+  text-shadow: 0 0 5px rgb(203, 11, 203), 0 0 10px rgb(184, 72, 222);
+}
+
+.dropdown-item:active,
+.dropdown-item.active {
+  background-color: #1f3e72;
+  color: var(--bs-body-color);
+}
+
+.dropdown-item:focus {
+  background-color: #1f3e72;
+  color: var(--bs-body-color);
+}
+
+.dropdown-menu {
+  background-color: var(--bg-primary);
+}
+
+.dropdown-menu :hover {
+  background-color: var(--bg-accent);
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--bs-body-color);
+  text-shadow: 0 0 5px rgb(203, 11, 203), 0 0 10px rgb(184, 72, 222);
+}
+
+.dropdown-item:active,
+.dropdown-item.active {
+  background-color: #1f3e72;
+  color: var(--bs-body-color);
+}
+
+.navbar-toggler {
+  border-color: var(--bs-body-color);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  border-color: var(--bs-body-color);
+  box-shadow: 0 0 5px rgb(203, 11, 203), 0 0 10px rgb(184, 72, 222);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23e6ecf8' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  /* ai made url for the navbar toggler icon */
+}
+.hero-section {
+  min-height: 75vh;
+}
+.about-me-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+.schools {
+  width: 15rem;
+}
