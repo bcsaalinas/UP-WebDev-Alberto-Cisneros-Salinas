@@ -6,22 +6,25 @@
 var memo = {};
 function fibonacci() {
   "use strict";
-  var n = document.getElementById("num").value;
+  var n = parseInt(document.getElementById("num").value);
   var val = f(n);
-  return val;
+  document.getElementById("fibonacciLbl").innerText = val;
 }
 
 function f(n) {
   var value;
   // Check if the memory array already contains the requested number
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  if (n < 0) return undefined;
   if (memo.hasOwnProperty(n)) {
     value = memo[n];
   } else {
-    //TODO: Implement the fibonacci function here!
-
+    value = f(n - 1) + f(n - 2);
     memo[n] = value;
   }
 
   return value;
 }
-console.log(fibonacci(15));
+
+document.getElementById("btn").addEventListener("click", fibonacci);
