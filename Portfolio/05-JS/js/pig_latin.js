@@ -3,28 +3,47 @@ Pig Latin
 */
 
 function igpayAtinlay(str) {
-  // TODO: Initialize the word array properly
-  var returnArray = [],
-    wordArray = [];
-  // TODO: make sure that the output is being properly built to produce the desired result.
-  for (var i = 0; i < wordArray.length; i++) {
-    var word = wordArray[i];
-    var beginning = word.charAt(0);
+  var input =
+    typeof str === "string"
+      ? str
+      : document.getElementById("txtVal").value || "";
+  var trimmed = input.trim();
+  var words = trimmed === "" ? [] : trimmed.split(/\s+/);
+  var result = [];
 
-    if (/[aeiouAEIOU]/.test(beginning)) {
-      returnArray.push(word);
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+    if (word === "") {
       continue;
     }
 
-    for (var ii = 1; ii < word.length; ii++) {
+    var beginning = word.charAt(0);
+
+    if (/[aeiouAEIOU]/.test(beginning)) {
+      result.push(word + "way");
+      continue;
+    }
+
+    var ii = 1;
+    for (; ii < word.length; ii++) {
       if (/[aeiouAEIOU]/.test(word.charAt(ii))) {
         break;
-      } else {
-        beginning += word.charAt(ii);
       }
+      beginning += word.charAt(ii);
+    }
+
+    if (ii === word.length) {
+      result.push(word + "ay");
+    } else {
+      result.push(word.slice(ii) + beginning + "ay");
     }
   }
-  return returnArray.join(" ");
+
+  var output = result.join(" ");
+  if (typeof str !== "string") {
+    document.getElementById("pigLatLbl").innerHTML = output;
+  }
+  return output;
 }
 
 // Some examples of expected outputs

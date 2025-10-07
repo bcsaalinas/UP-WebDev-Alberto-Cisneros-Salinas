@@ -62,10 +62,12 @@ function component(width, height, color, x, y, type) {
     this.y += this.speedY;
     if (this.type == "image") {
       if (this.x >= canvasWidth - this.width / 2 || this.x <= 0) {
-        //TODO: make the image bounce back when reaching the edges
+        this.speedX *= -1;
+        this.x = Math.max(0, Math.min(canvasWidth - this.width, this.x));
       }
       if (this.y >= canvasHeight - this.height / 2 || this.y <= 0) {
-        //TODO: make the image bounce back when reaching the edges
+        this.speedY *= -1;
+        this.y = Math.max(0, Math.min(canvasHeight - this.height, this.y));
       }
     }
   };
@@ -80,17 +82,24 @@ function updateGameArea() {
 
 // Methods that control the movement of the object
 function moveup() {
-  myGamePiece.speedY -= 1;
+  if (myGamePiece.speedX !== 0) myGamePiece.speedX = 0;
+
+  myGamePiece.speedY = -1;
 }
 
 function movedown() {
-  //TODO: implement the move down functionality
+  if (myGamePiece.speedX !== 0) myGamePiece.speedX = 0;
+
+  myGamePiece.speedY = 1;
 }
 
 function moveleft() {
-  //TODO: implement the move left functionality
+  if (myGamePiece.speedY !== 0) myGamePiece.speedY = 0;
+
+  myGamePiece.speedX = -1;
 }
 
 function moveright() {
-  myGamePiece.speedX += 1;
+  if (myGamePiece.speedY !== 0) myGamePiece.speedY = 0;
+  myGamePiece.speedX = 1;
 }
