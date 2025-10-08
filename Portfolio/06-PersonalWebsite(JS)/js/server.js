@@ -26,7 +26,7 @@ const scheduleElements = {
 initializeSchedule();
 
 function initializeSchedule() {
-  // ff the schedule table is not present we stop quietly.
+  // if the schedule table is not present we stop quietly.
   if (!scheduleElements.tableBody) return;
 
   scheduleElements.previousMonthBtn?.addEventListener("click", () => {
