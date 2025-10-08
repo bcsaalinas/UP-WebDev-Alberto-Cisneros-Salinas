@@ -1,12 +1,1119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alberto Cisneros Salinas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <div class="container py-2">
+        <a class="navbar-brand fw-semibold" href="#hero">Alberto Cisneros</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#hero">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a href="destination.html" class="nav-link">Favorite Place</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#favorites" class="nav-link">Favorites</a>
+            </li>
+            <li class="nav-item">
+              <a href="#media" class="nav-link">Media</a>
+            </li>
+            <li class="nav-item">
+              <a href="#schedule" class="nav-link">Schedule</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Quick links
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#background">Background</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#education">Education</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#skills">Skills</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 mt-lg-0 ms-lg-4" role="search">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search sections"
+                aria-label="Search sections"
+              />
+              <button class="btn btn-dark" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="py-5" id="hero">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8">
+              <div class="p-5 bg-white rounded-5 shadow-sm text-center">
+                <p class="text-uppercase text-muted mb-3">
+                  Computer science student
+                </p>
+                <h1 class="display-3 fw-bold mb-3">Alberto Cisneros Salinas</h1>
+                <p class="lead text-secondary mb-4">
+                  I build front-end projects that stay fast, accessible, and
+                  easy to maintain. Most days I’m learning by shipping small
+                  ideas and polishing the details.
+                </p>
+                <figure class="mb-4">
+                  <blockquote class="blockquote mb-0">
+                    <p class="fs-4 text-dark">
+                      <i>
+                        "Your time is limited, so don't waste it living someone
+                        else's life"
+                      </i>
+                    </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer mt-3 text-secondary">
+                    Steve Jobs
+                  </figcaption>
+                </figure>
+                <div
+                  class="btn-group mb-3"
+                  role="group"
+                  aria-label="Quick links"
+                >
+                  <a class="btn btn-primary" href="#about">About</a>
+                  <a class="btn btn-outline-primary" href="#favorites"
+                    >Favorites</a
+                  >
+                  <a class="btn btn-outline-primary" href="#schedule"
+                    >Schedule</a
+                  >
+                </div>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                  <a
+                    class="btn btn-outline-secondary d-inline-flex align-items-center gap-2"
+                    href="https://github.com/bcsaalinas"
+                    target="_blank"
+                    rel="noopener"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="Visit my GitHub profile"
+                  >
+                    <i class="bi bi-github"></i>
+                    GitHub
+                  </a>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#contactModal"
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="about">
+        <div class="container">
+          <div class="p-4 p-md-5 bg-white rounded-5 shadow-sm">
+            <div class="row g-5 align-items-center">
+              <div class="col-lg-4 text-center text-lg-start">
+                <img
+                  src="images/IMG_2486.jpg"
+                  alt="Photo of Alberto"
+                  class="about-me-image shadow-sm"
+                />
+              </div>
+              <div class="col-lg-8">
+                <h2 class="display-5 fw-semibold mb-3">Hi, I'm Alberto</h2>
+                <p class="fs-5 text-secondary">
+                  I’m studying Computer Science at Universidad Panamericana with
+                  a focus on front-end engineering. I like turning wireframes
+                  into working UI, refactoring component libraries, and
+                  collaborating on small product ideas with classmates.
+                </p>
+                <div class="row row-cols-1 row-cols-sm-3 g-3 mt-4">
+                  <div class="col">
+                    <div class="p-3 bg-body-tertiary rounded-4 border">
+                      <p class="text-uppercase small text-muted mb-1">
+                        Experience
+                      </p>
+                      <p class="mb-0 fw-semibold">Freelance front-end</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="p-3 bg-body-tertiary rounded-4 border">
+                      <p class="text-uppercase small text-muted mb-1">Focus</p>
+                      <p class="mb-0 fw-semibold">Interfaces & systems</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="p-3 bg-body-tertiary rounded-4 border">
+                      <p class="text-uppercase small text-muted mb-1">
+                        Based in
+                      </p>
+                      <p class="mb-0 fw-semibold">Guadalajara, MX</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion accordion-flush mt-5" id="aboutAccordion">
+              <div class="accordion-item" id="education">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#educationCollapse"
+                    aria-expanded="false"
+                    aria-controls="educationCollapse"
+                  >
+                    Education
+                  </button>
+                </h2>
+                <div id="educationCollapse" class="accordion-collapse collapse">
+                  <div class="accordion-body bg-body-tertiary rounded-4">
+                    <div class="row g-4">
+                      <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                          <img
+                            src="images/finlandes.png"
+                            alt="Colegio Finlandes"
+                            class="card-img-top"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              Studied Middle School at Colegio Finlandes
+                              (2019-2021)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                          <img
+                            src="images/ciencias.jpeg"
+                            alt="Instituto de Ciencias"
+                            class="card-img-top"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              Completed High School at Instituto de Ciencias
+                              (2021-2024)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                          <img
+                            src="images/UP.jpg"
+                            alt="Universidad Panamericana"
+                            class="card-img-top"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              Currently studying at Universidad Panamericana
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" id="background">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#backgroundCollapse"
+                    aria-expanded="false"
+                    aria-controls="backgroundCollapse"
+                  >
+                    Background
+                  </button>
+                </h2>
+                <div
+                  id="backgroundCollapse"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body bg-body-tertiary rounded-4">
+                    <p class="mb-4 text-secondary">
+                      I’m currently focused on TypeScript, design systems, and
+                      keeping UI trim without losing usability. Shipping
+                      projects with designers has helped me stay grounded in
+                      real workflows.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark"
+                      data-bs-toggle="popover"
+                      data-bs-placement="top"
+                      data-bs-title="Learning focus"
+                      data-bs-content="Leveling up TypeScript skills, design tokens, and accessibility-first patterns."
+                    >
+                      What I'm learning
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" id="skills">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#skillsCollapse"
+                    aria-expanded="false"
+                    aria-controls="skillsCollapse"
+                  >
+                    Skills
+                  </button>
+                </h2>
+                <div id="skillsCollapse" class="accordion-collapse collapse">
+                  <div class="accordion-body bg-body-tertiary rounded-4">
+                    <div class="container-fluid">
+                      <div class="mb-4">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <h3 class="h6 text-uppercase text-muted mb-0">
+                            JavaScript
+                          </h3>
+                          <span class="fw-semibold">70%</span>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="JavaScript proficiency"
+                          aria-valuenow="70"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-dark"
+                            style="width: 70%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <h3 class="h6 text-uppercase text-muted mb-0">C++</h3>
+                          <span class="fw-semibold">60%</span>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="C++ proficiency"
+                          aria-valuenow="60"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 60%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <h3 class="h6 text-uppercase text-muted mb-0">
+                            HTML / CSS
+                          </h3>
+                          <span class="fw-semibold">100%</span>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="HTML and CSS proficiency"
+                          aria-valuenow="100"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-secondary"
+                            style="width: 100%"
+                          ></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <h3 class="h6 text-uppercase text-muted mb-0">
+                            Python
+                          </h3>
+                          <span class="fw-semibold">80%</span>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="Python proficiency"
+                          aria-valuenow="80"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-info"
+                            style="width: 80%"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="favorites">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="display-5 fw-semibold">Current favorites</h2>
+            <p class="text-secondary">
+              Links and references I revisit when I need inspiration or a quick
+              reset.
+            </p>
+            <button
+              class="btn btn-outline-dark"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasFavorites"
+              aria-controls="offcanvasFavorites"
+            >
+              Browse detailed lists
+            </button>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="images/book.webp" class="card-img-top" alt="Books" />
+                <div class="card-body">
+                  <h3 class="card-title">Reading List</h3>
+                  <p class="card-text text-secondary">
+                    Strategy, tech, and the occasional thriller that sparks
+                    ideas.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-sm"
+                  >
+                    Save for later
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card border-0 shadow-sm h-100">
+                <img
+                  src="images/movies.jpeg"
+                  class="card-img-top"
+                  alt="Movies"
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Films</h3>
+                  <p class="card-text text-secondary">
+                    Classic thrillers and smart storytelling that keep the
+                    stakes high.
+                  </p>
+                  <div class="spinner-border text-dark" role="status">
+                    <span class="visually-hidden">Loading suggestions...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card border-0 shadow-sm h-100">
+                <img
+                  src="images/tvshows.jpg"
+                  class="card-img-top"
+                  alt="TV shows"
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Series</h3>
+                  <p class="card-text text-secondary">
+                    Slow-burn series with characters worth dissecting after the
+                    credits.
+                  </p>
+                  <div
+                    class="btn-group btn-group-sm"
+                    role="group"
+                    aria-label="TV filters"
+                  >
+                    <button type="button" class="btn btn-outline-dark">
+                      Drama
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                      Thriller
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                      Sci-Fi
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="media">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <h2 class="display-6 fw-semibold mb-3">Media that fuels me</h2>
+              <p class="text-secondary">
+                Talks, performances, and stories that connect technology, music,
+                and design.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div
+                id="mediaCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-5 shadow-sm overflow-hidden">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/stevejobs.jpeg"
+                      class="d-block w-100"
+                      alt="Steve Jobs"
+                    />
+                    <div class="carousel-caption text-start">
+                      <h5>Biographies</h5>
+                      <p>
+                        Leaders who scale products without losing the narrative
+                        behind them.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/travisscott.jpeg"
+                      class="d-block w-100"
+                      alt="Travis Scott"
+                    />
+                    <div class="carousel-caption text-start">
+                      <h5>Concert visuals</h5>
+                      <p>
+                        Live shows where lighting, sound, and motion carry the
+                        experience.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/virgil.jpeg"
+                      class="d-block w-100"
+                      alt="Virgil Abloh"
+                    />
+                    <div class="carousel-caption text-start">
+                      <h5>Design talks</h5>
+                      <p>
+                        Ideas that bridge fashion, architecture, and everyday
+                        problem solving.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#mediaCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#mediaCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="schedule">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-white">
+                  <div
+                    class="d-flex flex-wrap justify-content-between align-items-center gap-3"
+                  >
+                    <div>
+                      <span class="fw-semibold d-block">Weekly schedule</span>
+                      <small class="text-secondary" id="currentWeekLabel"
+                        >Loading week...</small
+                      >
+                    </div>
+                    <div
+                      class="d-flex align-items-center flex-wrap gap-2 text-nowrap"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm"
+                        id="previousMonthBtn"
+                      >
+                        Previous
+                      </button>
+                      <span
+                        class="fw-semibold"
+                        id="currentMonthLabel"
+                      ></span>
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm"
+                        id="nextMonthBtn"
+                      >
+                        Next
+                      </button>
+                      <div
+                        class="spinner-border spinner-border-sm text-dark"
+                        role="status"
+                        id="scheduleSpinner"
+                      >
+                        <span class="visually-hidden">Loading schedule</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3"
+                  >
+                    <div
+                      class="btn-group btn-group-sm"
+                      role="group"
+                      aria-label="Select week"
+                      id="weekButtonGroup"
+                    ></div>
+                    <span class="text-secondary small" id="weekSummaryText"></span>
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      class="table table-hover align-middle mb-0"
+                      id="scheduleTable"
+                    >
+                      <thead class="table-light">
+                        <tr>
+                          <th scope="col">Status</th>
+                          <th scope="col">Day</th>
+                          <th scope="col">Start</th>
+                          <th scope="col">End</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Notes</th>
+                        </tr>
+                      </thead>
+                      <tbody id="scheduleTableBody">
+                        <!-- Your activities will appear here -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="card-footer bg-white">
+                  <div
+                    class="d-flex flex-wrap justify-content-between align-items-center gap-2"
+                  >
+                    <span
+                      class="text-secondary small mb-0"
+                      id="monthSummaryText"
+                    ></span>
+                    <div
+                      class="btn-group btn-group-sm"
+                      role="group"
+                      aria-label="Week shortcuts"
+                      id="weekFooterButtons"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <h3 class="h4 fw-semibold mb-4">Add an activity</h3>
+                  <form id="scheduleForm" class="needs-validation" novalidate>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="activityDate"
+                        required
+                      />
+                      <label for="activityDate">Date</label>
+                      <div class="invalid-feedback">Select a date.</div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                      <div class="col-6">
+                        <div class="form-floating">
+                          <input
+                            type="time"
+                            class="form-control"
+                            id="startTime"
+                            value="12:00"
+                            required
+                          />
+                          <label for="startTime">Start</label>
+                          <div class="invalid-feedback">
+                            Provide a start time.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-floating">
+                          <input
+                            type="time"
+                            class="form-control"
+                            id="endTime"
+                            value="13:00"
+                            required
+                          />
+                          <label for="endTime">End</label>
+                          <div class="invalid-feedback">
+                            Provide an end time.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="activityName"
+                        placeholder="Activity"
+                        required
+                      />
+                      <label for="activityName">Activity</label>
+                      <div class="invalid-feedback">Describe the activity.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="activityType" required>
+                        <option value="" selected disabled>Choose type</option>
+                        <option value="school">School</option>
+                        <option value="personal">Personal</option>
+                        <option value="professional">Professional</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <label for="activityType">Type</label>
+                      <div class="invalid-feedback">Select a type.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <textarea
+                        class="form-control"
+                        placeholder="Notes"
+                        id="activityNotes"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="activityNotes">Notes</label>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <div>
+                        <label for="activityColor" class="form-label mb-1"
+                          >Flag color</label
+                        >
+                        <input
+                          type="color"
+                          class="form-control form-control-color"
+                          id="activityColor"
+                          value="#0d6efd"
+                          title="Choose flag color"
+                        />
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="statusOptions"
+                          id="statusFree"
+                          checked
+                        />
+                        <label class="form-check-label" for="statusFree"
+                          >Free</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="statusOptions"
+                          id="statusBusy"
+                        />
+                        <label class="form-check-label" for="statusBusy"
+                          >Busy</label
+                        >
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">
+                      Save to schedule
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="signin">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+              <div class="card border-0 shadow-sm bg-white">
+                <div class="card-body p-4 p-lg-5">
+                  <h3 class="h4 fw-semibold text-center mb-4">Sign in</h3>
+                  <form>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="signinEmail"
+                        placeholder="name@example.com"
+                        required
+                      />
+                      <label for="signinEmail">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="signinPassword"
+                        placeholder="Password"
+                        required
+                      />
+                      <label for="signinPassword">Password</label>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="rememberMe"
+                        />
+                        <label class="form-check-label" for="rememberMe"
+                          >Remember me</label
+                        >
+                      </div>
+                      <a href="#" class="link-secondary">Forgot password?</a>
+                    </div>
+                    <button class="btn btn-primary w-100" type="submit">
+                      Enter dashboard
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white border-top py-4">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <p class="mb-0 text-secondary">&copy; 2024 Alberto Cisneros Salinas</p>
+        <button
+          class="btn btn-outline-primary btn-sm"
+          id="toastTrigger"
+          type="button"
+        >
+          Show schedule tips
+        </button>
+      </div>
+    </footer>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasFavorites"
+      aria-labelledby="offcanvasFavoritesLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasFavoritesLabel">
+          Quick favorites
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <h6 class="text-uppercase text-muted">Books</h6>
+        <ul class="list-unstyled mb-4">
+          <li>48 Laws of Power</li>
+          <li>The Art of War</li>
+          <li>Ghost in the Wires</li>
+        </ul>
+        <h6 class="text-uppercase text-muted">Movies</h6>
+        <ul class="list-unstyled mb-4">
+          <li>Scarface</li>
+          <li>The Godfather</li>
+          <li>The Conjuring</li>
+        </ul>
+        <h6 class="text-uppercase text-muted">TV Shows</h6>
+        <ul class="list-unstyled">
+          <li>Breaking Bad</li>
+          <li>Ozark</li>
+          <li>Dark</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="scheduleToast"
+        class="toast border-0 shadow"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">Schedule</strong>
+          <small>Just now</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Added to your schedule!</div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Say hi</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contactName"
+                  placeholder="Your name"
+                />
+                <label for="contactName">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="contactEmail"
+                  placeholder="name@example.com"
+                />
+                <label for="contactEmail">Email</label>
+              </div>
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Message"
+                  id="contactMessage"
+                  style="height: 120px"
+                ></textarea>
+                <label for="contactMessage">Message</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      tooltipTriggerList.forEach((el) => new bootstrap.Tooltip(el));
+
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      popoverTriggerList.forEach((el) => new bootstrap.Popover(el));
+
+      const toastTrigger = document.getElementById("toastTrigger");
+      const toastElement = document.getElementById("scheduleToast");
+      const scheduleToast = toastElement
+        ? new bootstrap.Toast(toastElement)
+        : null;
+      toastTrigger?.addEventListener("click", () => {
+        scheduleToast?.show();
+      });
+
+      const scheduleForm = document.getElementById("scheduleForm");
+      const dateInput = document.getElementById("activityDate");
+      const CURRENT_YEAR = new Date().getFullYear();
+      const dateInvalidFeedback =
+        dateInput?.parentElement.querySelector(".invalid-feedback");
+      const BASE_DATE_MSG = "Select a date.";
+
+      function setYearError(isError, msg) {
+        if (!dateInput) return;
+        if (isError) {
+          dateInput.setCustomValidity(msg);
+          if (dateInvalidFeedback) dateInvalidFeedback.textContent = msg;
+        } else {
+          dateInput.setCustomValidity("");
+          if (dateInvalidFeedback)
+            dateInvalidFeedback.textContent = BASE_DATE_MSG;
+        }
+      }
+
+      dateInput?.addEventListener("input", () => {
+        if (!dateInput.value) {
+          setYearError(false);
+          return;
+        }
+        const y = new Date(dateInput.value).getFullYear();
+        if (y !== CURRENT_YEAR) {
+          setYearError(
+            true,
+            `Please enter a date in the current year (${CURRENT_YEAR}).`
+          );
+        } else {
+          setYearError(false);
+        }
+      });
+
+      scheduleForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (dateInput && dateInput.value) {
+          const selectedYear = new Date(dateInput.value).getFullYear();
+          if (selectedYear !== CURRENT_YEAR) {
+            setYearError(
+              true,
+              `Year must be ${CURRENT_YEAR}. Please correct it.`
+            );
+          } else {
+            setYearError(false);
+          }
+        }
+
+        scheduleForm.classList.add("was-validated");
+
+        if (scheduleForm.checkValidity()) {
+          getData();
+          scheduleToast?.show();
+          scheduleForm.reset();
+          scheduleForm.classList.remove("was-validated");
+          setYearError(false);
+        }
+      });
+    </script>
+    <!-- added a bit of JS for form validation -->
+
+    <!-- Actual script for the exercise-->
+    <script src="js/server.js"></script>
+  </body>
 </html>
