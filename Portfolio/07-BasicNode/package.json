@@ -1,0 +1,19 @@
+{
+  "name": "07-basicnode",
+  "version": "1.0.0",
+  "description": "basic node exercise ",
+  "license": "ISC",
+  "author": "Alberto Cisneros",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^11.6.2",
+    "star-wars-quotes": "^1.0.2",
+    "superheroes": "^4.0.0",
+    "supervillains": "^4.0.0"
+  }
+}
