@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>BMI Calculator</h1>
-    <form>
-        <input type="text" name="weight" placeholder="Weight">
-        <input type="text" name="height" placeholder="Height">
-        <button type="submit" name="submit">Calculate BMI</button>
+    <form action="/bmi" method="POST">
+      <input
+        type="number"
+        step="any"
+        name="weight"
+        placeholder="Weight"
+        required
+      />
+      <input
+        type="number"
+        step="any"
+        name="height"
+        placeholder="Height"
+        required
+      />
+      <button type="submit" name="submit">Calculate BMI</button>
     </form>
-</body>
-
+  </body>
 </html>

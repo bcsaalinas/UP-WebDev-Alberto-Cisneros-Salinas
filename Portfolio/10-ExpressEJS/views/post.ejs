@@ -1,0 +1,30 @@
+<%- include("partials/header", { pageTitle: post.title }) %>
+
+<main>
+  <h2><%= post.title %></h2>
+  <p><%= post.content %></p>
+
+  <section>
+    <h3>Edit Post</h3>
+    <form action="/posts/<%= post.id %>/update" method="post">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" value="<%= post.title %>" required>
+
+      <label for="content">Content</label>
+      <textarea id="content" name="content" rows="5" required><%= post.content %></textarea>
+
+      <button type="submit">Update Post</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Delete Post</h3>
+    <form action="/posts/<%= post.id %>/delete" method="post">
+      <button type="submit">Delete Post</button>
+    </form>
+  </section>
+
+  <p><a href="/home">Back to home</a></p>
+</main>
+
+<%- include("partials/footer") %>

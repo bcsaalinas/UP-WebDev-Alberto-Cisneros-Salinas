@@ -13,12 +13,65 @@
         <h3>
             <%= error %>
         </h3>
+    <% } %>
+
+    <form action="/greet" method="get">
+        <label for="name">Register:</label>
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="submit" value="Add">
+    </form>
+
+    <% if (locals.lastGreeted) { %>
+        <p>Hello <strong><%= lastGreeted %></strong>! Nice to see you.</p>
+    <% } %>
+
+    <% if (locals.names && names.length) { %>
+        <section>
+            <h2>Friends greeted</h2>
+            <p>Welcome back <%= names.join(', ') %></p>
+            <ul>
+                <% names.forEach(function(person, index) { %>
+                    <li>
+                        <a href="/greet/<%= index %>">
+                            <%= person %>
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+    <% } %>
+
+    <section>
+        <h2>TODO List</h2>
+        <form action="/task" method="post">
+            <label for="task">New task:</label>
+            <input type="text" id="task" name="task" required>
+            <button type="submit">Add task</button>
+        </form>
+
+        <% if (locals.tasks && tasks.length) { %>
+            <ol>
+                <% tasks.forEach(function(item, index) { %>
+                    <li>
+                        <span><%= item %></span>
+                        <form action="/task/<%= index %>/move" method="post" style="display:inline">
+                            <input type="hidden" name="direction" value="up">
+                            <button type="submit" <%= index === 0 ? 'disabled' : '' %>>▲</button>
+                        </form>
+                        <form action="/task/<%= index %>/move" method="post" style="display:inline">
+                            <input type="hidden" name="direction" value="down">
+                            <button type="submit" <%= index === tasks.length - 1 ? 'disabled' : '' %>>▼</button>
+                        </form>
+                        <form action="/task/<%= index %>?_method=DELETE" method="post" style="display:inline">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </li>
+                <% }) %>
+            </ol>
+        <% } else { %>
+            <p>No tasks yet. Add one above!</p>
         <% } %>
-            <form action="/greet" method="get">
-                Register:
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="submit" value="go next">
-            </form>
+    </section>
 
 </body>
 
