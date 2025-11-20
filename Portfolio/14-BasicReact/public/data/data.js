@@ -19,7 +19,7 @@ const sw = [
     best_character: {
       name: "Obi-wan Kenobi",
       affiliation: "Jedi",
-      image: "Obi-wan_Kenobi.png",
+      image: "Obi-wan_Kenobi.jpg",
       bio: "Obi-Wan Kenobi was a legendary Force-sensitive human male Jedi Master who served on the Jedi High Council during the final years of the Republic Era. As a Jedi General, Kenobi served in the Grand Army of the Republic that fought against the Separatist Droid Army during the Clone Wars. Kenobi, however, was forced into exile as a result of the Great Jedi Purge. As a mentor, Kenobi was responsible for training two members of the Skywalker family, Anakin and Luke Skywalker, both of whom served in turn as his Padawan in the ways of the Force.",
     },
   },
