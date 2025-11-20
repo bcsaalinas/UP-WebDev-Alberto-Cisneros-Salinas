@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Share a secret</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <main class="page stack" style="align-items:center;">
+    <div class="card stack" style="width:100%; max-width:520px;">
+      <div class="stack" style="gap:0.35rem;">
+        <h1 style="margin:0;">Share your secret</h1>
+        <p class="muted">Anything goes, just keep it fun.</p>
+      </div>
+
+      <form class="stack" action="/submit" method="post">
+        <label for="secret">Secret</label>
+        <textarea id="secret" name="secret" rows="5" required></textarea>
+
+        <div class="stack">
+          <button type="submit">Save secret</button>
+          <a class="button-link button-secondary" href="/secrets">Back to secrets</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

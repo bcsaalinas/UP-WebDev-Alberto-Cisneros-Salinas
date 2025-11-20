@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <main class="page stack" style="align-items:center;">
+    <div class="card stack" style="width:100%; max-width:520px;">
+      <div class="stack" style="gap:0.35rem;">
+        <h1 style="margin:0;">Login</h1>
+        <p class="muted">Use the account you registered earlier.</p>
+      </div>
+
+      <% if (errorMessage) { %>
+      <p class="notice" role="alert"><%= errorMessage %></p>
+      <% } %>
+
+      <form class="stack" action="/login" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <div class="stack">
+          <button type="submit">Login</button>
+          <a class="button-link button-secondary" href="/">Back home</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

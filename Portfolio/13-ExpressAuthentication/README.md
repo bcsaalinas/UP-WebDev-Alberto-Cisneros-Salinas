@@ -34,7 +34,7 @@
       - App type: web
       - Name
       - Authorized JS origins: localhost:3000
-      - Authorized redirect URIs: localhost:3000/auth/google/secrets
+      - Authorized redirect URIs: http://localhost:3000/auth/google/callback
     - Download JSON
 - Add CLIENT_ID and CLIENT_SECRET to .env file
 

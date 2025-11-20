@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Middle-Earth Secrets</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <main class="page stack" style="align-items:center; text-align:center;">
+    <img src="/images/StarLion.png" alt="lion brewery" style="max-width:120px;" />
+    <div class="card stack" style="width:100%; max-width:540px;">
+      <div class="stack" style="gap:0.35rem;">
+        <h1 style="margin:0;">Middle-Earth Secrets</h1>
+        <p class="muted" style="margin:0;">Register or log in to share secrets. Google auth is ready to go.</p>
+      </div>
+
+      <% if (user) { %>
+      <p style="margin:0;">You are logged in as <strong><%= user.username %></strong></p>
+      <div class="stack">
+        <a class="button-link" href="/secrets">Go to secrets</a>
+        <a class="button-link button-secondary" href="/logout">Logout</a>
+      </div>
+      <% } else { %>
+      <div class="stack">
+        <a class="button-link" href="/register">Register</a>
+        <a class="button-link button-secondary" href="/login">Login</a>
+        <% if (googleEnabled) { %>
+        <a class="button-link button-google" href="/auth/google">Continue with Google</a>
+        <% } %>
+      </div>
+      <% } %>
+    </div>
+  </main>
+</body>
+
+</html>

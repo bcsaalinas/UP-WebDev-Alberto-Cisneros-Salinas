@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Garage</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/app.js" defer></script>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>Formula 1 Garage</h1>
+      <p class="tagline">MongoDB + Express practice</p>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2 data-form-title>Driver information</h2>
+        <form action="/drivers" method="post" id="driver-form" class="form">
+          <input type="hidden" name="driverId" id="driverId" />
+          <div class="form-grid">
+            <label>
+              <span>Number</span>
+              <input type="number" name="num" id="num" min="0" placeholder="63" required />
+            </label>
+            <label>
+              <span>Code</span>
+              <input type="text" name="code" id="code" maxlength="3" placeholder="HAM" required />
+            </label>
+            <label>
+              <span>Name</span>
+              <input type="text" name="forename" id="forename" placeholder="Lewis" required />
+            </label>
+            <label>
+              <span>Last name</span>
+              <input type="text" name="surname" id="surname" placeholder="Hamilton" required />
+            </label>
+            <label>
+              <span>Date of birth</span>
+              <input type="date" name="dob" id="dob" />
+            </label>
+            <label>
+              <span>Biography URL</span>
+              <input type="url" name="url" id="url" placeholder="https://en.wikipedia.org/..." />
+            </label>
+            <label>
+              <span>Nationality</span>
+              <select name="nationality" id="nationality" required>
+                <option value="">Select nationality</option>
+                <% nationalities.forEach((nation) => { %>
+                  <option value="<%= nation %>"><%= nation %></option>
+                <% }) %>
+              </select>
+            </label>
+            <label>
+              <span>Team</span>
+              <select name="teamId" id="teamId">
+                <option value="">Select team</option>
+                <% teams.forEach((team) => { %>
+                  <option value="<%= team._id %>"><%= team.name %></option>
+                <% }) %>
+              </select>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit">Save driver</button>
+            <button type="reset" id="cancelEdit">Clear form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <div>
+            <h2>Entries</h2>
+            <p class="muted">Click edit to load an entry back into the form.</p>
+          </div>
+          <button type="button" id="toggleView" class="ghost">Show teams</button>
+        </div>
+
+        <div id="driverList">
+          <% if (!drivers.length) { %>
+            <p class="muted">There are no drivers saved yet.</p>
+          <% } else { %>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Code</th>
+                    <th>Driver</th>
+                    <th>Nationality</th>
+                    <th>Date of birth</th>
+                    <th>Team</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% drivers.forEach((driver) => { %>
+                    <% const dobValue = driver.dob ? driver.dob.toISOString().split('T')[0] : ''; %>
+                    <tr>
+                      <td><%= driver.num || '-' %></td>
+                      <td><%= driver.code || '-' %></td>
+                      <td>
+                        <div class="stacked">
+                          <strong><%= driver.forename %> <%= driver.surname %></strong>
+                          <% if (driver.url) { %>
+                            <a href="<%= driver.url %>" target="_blank" rel="noopener">Profile</a>
+                          <% } %>
+                        </div>
+                      </td>
+                      <td><%= driver.nationality || '—' %></td>
+                      <td><%= dobValue || '—' %></td>
+                      <td><%= driver.team ? driver.team.name : '—' %></td>
+                      <td>
+                        <div class="table-actions">
+                          <button type="button" data-edit-driver
+                            data-id="<%= driver._id %>"
+                            data-num="<%= driver.num || '' %>"
+                            data-code="<%= driver.code || '' %>"
+                            data-forename="<%= driver.forename || '' %>"
+                            data-surname="<%= driver.surname || '' %>"
+                            data-dob="<%= dobValue %>"
+                            data-url="<%= driver.url || '' %>"
+                            data-nationality="<%= driver.nationality || '' %>"
+                            data-team-id="<%= driver.team && driver.team._id ? driver.team._id : '' %>">
+                            Edit
+                          </button>
+                          <form method="post" action="/drivers/<%= driver._id %>/delete" class="inline-form"
+                            data-delete-driver-form data-driver-name="<%= driver.forename %> <%= driver.surname %>">
+                            <button type="submit" class="danger">Delete</button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+            </div>
+          <% } %>
+        </div>
+
+        <div id="teamList" class="hidden">
+          <% if (!teamSummaries.length) { %>
+            <p class="muted">No teams available yet.</p>
+          <% } else { %>
+            <ul class="team-list">
+              <% teamSummaries.forEach((team) => { %>
+                <li>
+                  <strong><%= team.name %></strong>
+                  <p class="muted"><%= team.driverCount %> driver<%= team.driverCount === 1 ? '' : 's' %></p>
+                  <% if (!team.driverCount) { %>
+                    <p class="muted small">No drivers assigned.</p>
+                  <% } else { %>
+                    <ul class="inner-list">
+                      <% team.drivers.forEach((label) => { %>
+                        <li><%= label %></li>
+                      <% }) %>
+                    </ul>
+                  <% } %>
+                </li>
+              <% }) %>
+            </ul>
+          <% } %>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
