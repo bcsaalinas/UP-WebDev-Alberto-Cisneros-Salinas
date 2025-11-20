@@ -1,0 +1,8 @@
+{
+  "/api/movies/route": "app/api/movies/route.js",
+  "/api/auth/me/route": "app/api/auth/me/route.js",
+  "/[[...segments]]/page": "app/[[...segments]]/page.js",
+  "/api/movies/[episode]/comments/route": "app/api/movies/[episode]/comments/route.js",
+  "/api/movies/[episode]/feedback/route": "app/api/movies/[episode]/feedback/route.js",
+  "/api/movies/[episode]/route": "app/api/movies/[episode]/route.js"
+}

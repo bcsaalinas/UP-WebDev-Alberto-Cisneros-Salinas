@@ -1,0 +1,10 @@
+{
+  "name": "react3rd-partyapi-shell",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix client",
+    "start": "npm run start --prefix client",
+    "build": "npm run build --prefix client",
+    "install:client": "npm install --prefix client"
+  }
+}

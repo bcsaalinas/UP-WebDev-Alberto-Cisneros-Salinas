@@ -64,8 +64,31 @@ body {
 }
 
 .detail-card {
-  background-color: var(--panel);
+  background-color: var(--panel) !important;
   border: 1px solid var(--border);
+  color: #f8fafc;
+}
+
+.detail-card .text-secondary {
+  color: #cbd5e1 !important;
+}
+
+.form-control,
+.form-select {
+  color: #0b1224 !important;
+  background-color: #ffffff !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: #0b1224 !important;
+  background-color: #ffffff !important;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control::placeholder {
+  color: #6c757d !important;
 }
 
 .comment-card {

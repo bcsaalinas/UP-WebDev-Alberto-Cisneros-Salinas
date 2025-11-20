@@ -1,0 +1,6 @@
+{
+  "/[[...segments]]/page": "app/[[...segments]]/page.js",
+  "/api/movies/route": "app/api/movies/route.js",
+  "/api/movies/[episode]/route": "app/api/movies/[episode]/route.js",
+  "/api/movies/[episode]/comments/route": "app/api/movies/[episode]/comments/route.js"
+}

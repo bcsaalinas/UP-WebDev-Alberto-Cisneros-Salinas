@@ -2,6 +2,14 @@
 
 ---
 
-- Once again, re-use the exercise on our previous entry in our portfolio and add to it a login/signup form that will allow the user to be registered.
-- If the user has not been authenticated, he will only be able to see the data, but not modify it; this is, they will not be able to do like/dislike or add new comments. On the contrary, once authenticated, the user will be able to add/edit data and this should be saved in the backend.
-- Implement the state management using Redux & Thunk
+- Re-use the previous exercise, add login/signup so users can register.
+- Anonymous users can only view data; likes/dislikes and comments need authentication and must be saved in the backend.
+- Use Redux + Thunk for state management.
+
+## Running the solution
+
+- Code lives in `client/` (Next.js App Router + React Router on the client, Redux + Thunk for state).
+- Set `MONGODB_URI` for Mongo and `JWT_SECRET` for signing sessions. Defaults: `mongodb://127.0.0.1:27017/sw-watchlist` and `dev-secret`.
+- From `16-ReactAuthentication`: run `npm run install:client` once, then `npm run dev` to start the UI and API.
+- Auth endpoints: `POST /api/auth/signup`, `POST /api/auth/login`, `GET /api/auth/me`.
+- Data endpoints: `GET /api/movies`, `GET /api/movies/:episode`, `PATCH /api/movies/:episode/feedback`, `GET|POST /api/movies/:episode/comments` (POST + feedback need a Bearer token).
